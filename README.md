@@ -17,17 +17,18 @@ Sister package to [`@caspian-explorer/script-caspian-store`](https://github.com/
 | 0.5.0 | ✓ shipped | Short links, `<QrCodeButton>` (lazy `qrcode`), `<EmbedCodeGenerator>` |
 | 0.6.0 | ✓ shipped | SSRF-hardened OG metadata fetcher, `useOgMetadata`, `<LinkPreview>` |
 | **1.0.0** | **✓ shipped** | **Detailed event log, daily rollups, `useShareEvents`, `<ShareEventStream>`, BigQuery docs** |
-| 0.5.0 | planned | Short links, QR codes, embed code generator |
-| 0.6.0 | planned | SSRF-hardened OG metadata fetcher, `<LinkPreview>` |
-| 1.0.0 | planned | Detailed share-event analytics + BigQuery export |
+
+See [CHANGELOG.md](CHANGELOG.md) for the full release notes and [INSTALL.md](INSTALL.md) for end-to-end setup (Firebase deploy, Cloud Functions, TTL policy, BigQuery export).
 
 ## Scaffold a new app
 
 ```bash
-npx @caspian-explorer/script-caspian-share init my-share-app
+npm create caspian-share@latest my-share-app
 ```
 
 Produces a Next.js 14 App Router project pre-wired to the provider, with `next/link` + `next/image` adapters, theming, i18n, an OG image route (Vercel) and a `firebase.json` (Firebase Hosting). Pass `--minimal` to skip backend scaffolding, `--hosting=vercel` or `--hosting=firebase` to target one provider, or `--yes` to skip all prompts.
+
+If you can't use `npm create` (offline mirror, locked-down network), `npx @caspian-explorer/script-caspian-share init my-share-app` is an equivalent invocation against an installed package.
 
 ## Install
 
