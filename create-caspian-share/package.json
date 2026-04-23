@@ -1,0 +1,38 @@
+{
+  "name": "create-caspian-share",
+  "version": "0.1.0",
+  "description": "One-command scaffolder for @caspian-explorer/script-caspian-share. Enables `npm create caspian-share@latest <project-dir>`.",
+  "type": "module",
+  "bin": {
+    "create-caspian-share": "./index.mjs"
+  },
+  "files": [
+    "index.mjs",
+    "README.md"
+  ],
+  "license": "MIT",
+  "author": "Caspian-Explorer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caspian-Explorer/script-caspian-share.git",
+    "directory": "create-caspian-share"
+  },
+  "homepage": "https://github.com/Caspian-Explorer/script-caspian-share",
+  "keywords": [
+    "create",
+    "scaffold",
+    "share",
+    "share-buttons",
+    "open-graph",
+    "react",
+    "nextjs",
+    "firebase",
+    "vercel"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

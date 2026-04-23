@@ -1,0 +1,92 @@
+{
+  "name": "@caspian-explorer/script-caspian-share",
+  "version": "1.0.0",
+  "description": "Framework-agnostic React share buttons for Next.js on Firebase or Vercel. Native share, copy link, dropdown menu, dialog, sticky sidebar, inline bar — bring your own backend.",
+  "license": "MIT",
+  "author": "Caspian-Explorer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caspian-Explorer/script-caspian-share.git"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "caspian-share": "./scaffold/cli.mjs"
+  },
+  "files": [
+    "dist",
+    "src/styles/globals.css",
+    "firebase",
+    "scaffold",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./server": {
+      "types": "./dist/server/index.d.ts",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js"
+    },
+    "./firebase": {
+      "types": "./dist/firebase/index.d.ts",
+      "import": "./dist/firebase/index.mjs",
+      "require": "./dist/firebase/index.js"
+    },
+    "./og": {
+      "types": "./dist/og/index.d.ts",
+      "import": "./dist/og/index.mjs",
+      "require": "./dist/og/index.js"
+    },
+    "./styles.css": "./src/styles/globals.css"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist",
+    "prepare": "tsup"
+  },
+  "peerDependencies": {
+    "@vercel/og": "^0.6.0",
+    "firebase": "^11.0.0 || ^10.0.0",
+    "qrcode": "^1.5.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@vercel/og": { "optional": true },
+    "firebase": { "optional": true },
+    "qrcode": { "optional": true }
+  },
+  "devDependencies": {
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vercel/og": "^0.6.5",
+    "firebase": "^11.0.0",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

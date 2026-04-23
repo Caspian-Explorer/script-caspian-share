@@ -1,0 +1,30 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "shareEvents",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "urlHash", "order": "ASCENDING" },
+        { "fieldPath": "ts", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "shareEvents",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "urlHash", "order": "ASCENDING" },
+        { "fieldPath": "platformId", "order": "ASCENDING" },
+        { "fieldPath": "ts", "order": "DESCENDING" }
+      ]
+    },
+    {
+      "collectionGroup": "shareCountsDaily",
+      "queryScope": "COLLECTION",
+      "fields": [
+        { "fieldPath": "urlHash", "order": "ASCENDING" },
+        { "fieldPath": "yyyymmdd", "order": "DESCENDING" }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

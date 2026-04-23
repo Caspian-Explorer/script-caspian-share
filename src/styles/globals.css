@@ -1,0 +1,37 @@
+/* Caspian Share — base styles. Optional: import once in your app entry.
+ *   import '@caspian-explorer/script-caspian-share/styles.css';
+ *
+ * All visual styling is also inlined via React style props so the package works
+ * without this file. These hooks are here for consumers who want to override
+ * appearance with their own CSS or Tailwind classes.
+ */
+
+.caspian-share-button {
+  font-family: inherit;
+}
+
+.caspian-share-button:hover {
+  opacity: 0.92;
+}
+
+.caspian-share-button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.caspian-share-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.caspian-share-bar {
+  font-family: inherit;
+}
+
+.caspian-share-bar--sidebar {
+  pointer-events: auto;
+}
+
+.caspian-share-icon {
+  flex-shrink: 0;
+}
